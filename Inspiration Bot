@@ -1,0 +1,34 @@
+import discord
+import os
+import random
+from keep_alive import keep_alive
+
+client = discord.Client()
+
+@client.event
+async def on_ready():
+    print("I'm in")
+    print(client.user)
+
+@client.event
+async def on_message(message):
+    if message.author != client.user:
+      ans = random.randint(1,7)
+      print(ans)
+      if ans == 1:
+        await message.channel.send("Shoot for the moon. Even if you miss, you'll land among the stars.")
+      if ans == 2:
+        await message.channel.send("If life gives you lemons, make lemonade.")
+      if ans == 3:
+        await message.channel.send("You'll find love when you stop looking.")
+      if ans == 4:
+        await message.channel.send("It takes more muscles to frown than it does to smile.")
+      if ans == 5:
+        await message.channel.send("Whether you think you can, or you think you can’t – you’re right.")
+      if ans == 6:
+        await message.channel.send("Wake up. It's Kill-it-o-clock.")
+      if ans == 7:
+        await message.channel.send("If you don't like where you are, then change it. You are not a tree.")
+
+token = os.environ['DISCORD_BOT_SECRET']
+client.run(token)
