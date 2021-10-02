@@ -13,22 +13,48 @@ async def on_ready():
 @client.event
 async def on_message(message):
     if message.author != client.user:
-      ans = random.randint(1,7)
+      ans = random.randint(1,20)
       print(ans)
       if ans == 1:
         await message.channel.send("Shoot for the moon. Even if you miss, you'll land among the stars.")
-      if ans == 2:
+      elif ans == 2:
         await message.channel.send("If life gives you lemons, make lemonade.")
-      if ans == 3:
+      elif ans == 3:
         await message.channel.send("You'll find love when you stop looking.")
-      if ans == 4:
+      elif ans == 4:
         await message.channel.send("It takes more muscles to frown than it does to smile.")
-      if ans == 5:
+      elif ans == 5:
         await message.channel.send("Whether you think you can, or you think you can’t – you’re right.")
-      if ans == 6:
+      elif ans == 6:
         await message.channel.send("Wake up. It's Kill-it-o-clock.")
-      if ans == 7:
+      elif ans == 7:
         await message.channel.send("If you don't like where you are, then change it. You are not a tree.")
+      elif ans == 8:
+        await message.channel.send("It's not the number of breaths we take, but the number of moments that take our breath away.")
+      elif ans == 9:
+        await message.channel.send("Life is what happens to you while you're busy making other plans.")
+      elif ans == 10:
+        await message.channel.send("You're only as strong as the drinks you mix, the tables you dance on, and the friends you party with.")
+      elif ans == 11:
+        await message.channel.send("Live for the nights you'll never remember with the friends you'll never forget.")
+      elif ans == 12:
+        await message.channel.send("You have to look through the rain to see the rainbow.")
+      elif ans == 13:
+        await message.channel.send("You have to kiss a lot of frogs before you find your prince.")
+      elif ans == 14:
+        await message.channel.send("Everything happens for a reason.")
+      elif ans == 15:
+        await message.channel.send("Dream as if you'll live forever. Live as if you'll die today.")
+      elif ans == 16:
+        await message.channel.send("Real eyes realize real lies.")
+      elif ans == 17:
+        await message.channel.send("You miss 100% of the shots you don't take.")
+      elif ans == 18:
+        await message.channel.send("Attitude is everything.")
+      elif ans == 19:
+        await message.channel.send("I survived because the fire inside me burned brighter than the fire around me.")
+      elif ans == 20:
+        await message.channel.send("Don't cry because it's over, smile because it happened.")
 
 token = os.environ['DISCORD_BOT_SECRET']
 client.run(token)
